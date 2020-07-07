@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var server = require("browser-sync").create();
+var sourcemaps = require('gulp-sourcemaps');
 //css
 var sass = require('gulp-sass');
 var plumber = require("gulp-plumber");
@@ -18,6 +19,7 @@ var webp = require("gulp-webp");
 gulp.task("sass", function () {
   return gulp.src('source/scss/style.scss')
   .pipe(plumber())
+  .pipe(sourcemap.init())
   .pipe(sass())
   .pipe(postcss([
       autoprefixer()
@@ -26,6 +28,7 @@ gulp.task("sass", function () {
   //minify
   .pipe(csso())
   .pipe(rename("style.min.css"))
+  .pipe(sourcemap.write("."))
   .pipe(gulp.dest('build/css'))
 
   .pipe(server.stream());
