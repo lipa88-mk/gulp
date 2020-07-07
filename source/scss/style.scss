@@ -1,0 +1,124 @@
+$advantageBg: #10C9C3;$textColor: #9B9B9B;$aboutBG: #F5F5F5;
+$pcWidth: 1174px;$tabletWidth: 960px;$mobileWidth: 420px;
+
+
+  
+@mixin wrapper($width) {
+  width: $width;
+  margin: 0 auto;
+}
+html {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  margin:0;
+}
+.heading {
+  font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: rgb(23, 23, 23);
+}
+.text  {
+  color: $textColor;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+.btn {
+  display: inline-block;
+  padding: 1.5em 4.3em;
+  border: 2px solid $advantageBg;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: $advantageBg;
+  &:hover {
+    background-color: #fff;
+    color: $advantageBg;
+  }
+}
+.advantages {
+  background-color: $advantageBg;
+  color: #fff;
+  padding-top: 90px;
+  padding-bottom: 100px;
+  
+  &__wrap {
+    @include wrapper($pcWidth);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list {
+    flex-basis: 270px;
+  }
+}
+ .advantage-item {
+   
+  &__icon {
+    float: left;
+    margin-right: 20px;
+    &:hover {
+      color: $advantageBg; 
+      stroke-width: 10px;
+      stroke: #fff;
+    }
+  }
+
+   &__amount {
+    margin: 0;
+    font-size: 1.2em;
+   }
+   &__text {
+    margin: 13px 0 0;
+    text-transform: uppercase;
+    font-size: 0.8em;
+ }
+ }
+.about {
+  background-color: $aboutBG;
+  background-image: url(../img/about.jpg);
+  background-position: 17% top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 132px;
+  padding-bottom: 140px;
+  &__wrap {
+    @include wrapper($pcWidth);
+  }
+  &__heading,  
+  &__text,
+  &__signature {
+    margin-left: 670px;
+  }
+  &__heading {
+    margin-top: 0;
+  }
+  &__signature {
+    margin-top: 10px;
+  }
+  
+}
+
+.project {
+  padding: 4rem 0;
+  background-color: #fff;
+  text-align: center;
+  
+  &__heading   {
+    width: $pcWidth;
+    margin: 1em auto;
+  }
+  &__text {
+    width: $pcWidth / 2;
+    margin: 1em auto 2em;
+  }
+  
+}
+
