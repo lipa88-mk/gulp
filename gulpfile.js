@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var server = require("browser-sync").create();
-var sourcemaps = require('gulp-sourcemaps');
+var sourcemap = require('gulp-sourcemaps');
 //css
 var sass = require('gulp-sass');
 var plumber = require("gulp-plumber");
