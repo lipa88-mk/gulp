@@ -13,3 +13,15 @@
   }
   
 }
+
+@media (max-width: $pcWidth) {
+  .project__heading {
+    width: $tabletWidth;
+  }
+  .project__text {
+    width: $tabletWidth / 2;
+  }
+  .project__text br {
+    display: none;
+  }
+}

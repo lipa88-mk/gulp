@@ -21,13 +21,27 @@
       padding-top: 132px;
       padding-bottom: 140px;
     }
-  }
-  
+  }  
   &__heading {
     margin-top: 0;
   }
   &__signature {
     margin-top: 10px;
+  } 
+}
+
+@media (max-width: $pcWidth) {
+  .about__wrap {
+    @include wrapper($tabletWidth);
+    
   }
-  
+.about__col-txt {
+  // padding-left: 20px;
+width: 55%;
+}
+
+.about__col-bg{
+  width: 40%;
+    background-position-x: -40px;
+}
 }
