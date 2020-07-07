@@ -14,7 +14,21 @@
     flex-basis: 270px;
   }
 }
- .advantage-item {
+
+@media (max-width: $pcWidth) {
+  .advantages__wrap {
+    @include wrapper($tabletWidth);
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+.advantages__list {
+  margin-bottom: 2em;
+  flex-basis: 321px;
+}
+
+}
+ 
+.advantage-item {
    
   &__icon {
     float: left;
