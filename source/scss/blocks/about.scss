@@ -1,19 +1,32 @@
 .about {
   background-color: $aboutBG;
-  background-image: url(../img/about.jpg);
-  background-position: 17% top;
-  background-repeat: no-repeat;
-  background-size: contain;
-  padding-top: 132px;
-  padding-bottom: 140px;
   &__wrap {
     @include wrapper($pcWidth);
+    display: flex;
+    justify-content: space-between;
   }
-  &__heading,  
-  &__text,
-  &__signature {
-    margin-left: 670px;
+  &__col{
+    width: 50%;
+    box-sizing: border-box;
+    &-bg {
+      background-image: url(../img/about.jpg);
+      background-repeat: no-repeat;
+      background-size: 628px auto;
+      @media (min-resolution: 1.5dppx) {
+        background-image: url(../img/about-2x.jpg);
+      }
+    }
+    &-txt {
+      padding-left: 90px;
+      padding-top: 132px;
+      padding-bottom: 140px;
+    }
   }
+  // &__heading,  
+  // &__text,
+  // &__signature {
+  //   margin-left: 670px;
+  // }
   &__heading {
     margin-top: 0;
   }
