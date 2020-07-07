@@ -16,7 +16,7 @@ var imagemin = require('gulp-imagemin');
 var webp = require("gulp-webp");
 
 gulp.task("sass", function () {
-  return gulp.src('source/scss/*.scss')
+  return gulp.src('source/scss/style.scss')
   .pipe(plumber())
   .pipe(sass())
   .pipe(postcss([
