@@ -32,8 +32,7 @@
 
 @media (max-width: $pcWidth) {
   .about__wrap {
-    @include wrapper($tabletWidth);
-    
+    @include wrapper($tabletWidth);  
   }
 .about__col-txt {
   // padding-left: 20px;
@@ -42,6 +41,18 @@ width: 55%;
 
 .about__col-bg{
   width: 40%;
-    background-position-x: -40px;
+  background-position-x: -40px;
 }
+}
+
+@media (max-width: $tabletWidth) {
+  .about__wrap {
+    @include wrapper($mobileWidth);  
+  }
+  .about__col-bg{
+    display: none;
+  }
+  .about__col-txt {
+    width: 100%;
+  }
 }

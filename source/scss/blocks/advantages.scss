@@ -29,6 +29,11 @@
 }
 
 }
+@media (max-width: $tabletWidth) {
+  .advantages__wrap {
+    @include wrapper($mobileWidth);
+  }
+}
  
 .advantage-item {
    

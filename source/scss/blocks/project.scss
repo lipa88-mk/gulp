@@ -25,3 +25,12 @@
     display: none;
   }
 }
+
+@media (max-width: $tabletWidth) {
+  .project__heading {
+    width: $mobileWidth;
+  }
+  .project__text {
+    width: $mobileWidth;
+  }
+}
