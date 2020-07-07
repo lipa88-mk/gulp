@@ -1,0 +1,15 @@
+.project {
+  padding: 4rem 0;
+  background-color: #fff;
+  text-align: center;
+  
+  &__heading   {
+    width: $pcWidth;
+    margin: 1em auto;
+  }
+  &__text {
+    width: $pcWidth / 2;
+    margin: 1em auto 2em;
+  }
+  
+}
